@@ -1,0 +1,157 @@
+.bar {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ─── Inputs ──────────────────────────────────────────────────────────────── */
+.inputs {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.inputWrap {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 38px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--color-text);
+  background: var(--color-bg-card);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── Botones ─────────────────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.btnSearch {
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.btnSearch:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.btnSearch:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btnClear {
+  height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+.btnClear:hover:not(:disabled) {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-dark);
+}
+
+.btnClear:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnExport {
+  height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid #16a34a;
+  border-radius: var(--radius-md);
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.btnExport:hover:not(:disabled) {
+  background: #f0fdf4;
+}
+
+.btnExport:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── Spinner ─────────────────────────────────────────────────────────────── */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgb(255 255 255 / 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

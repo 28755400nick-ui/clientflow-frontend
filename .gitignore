@@ -1,0 +1,44 @@
+# ─── Dependencias ─────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Build de Next.js ─────────────────────────────────────────────────────────
+.next/
+out/
+dist/
+build/
+
+# ─── Variables de entorno (NUNCA subir al repo) ────────────────────────────────
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# ─── Cobertura de tests ────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─── Cache ────────────────────────────────────────────────────────────────────
+.cache/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Sistema operativo ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Editores ─────────────────────────────────────────────────────────────────
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

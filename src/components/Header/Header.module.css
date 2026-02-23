@@ -1,0 +1,130 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-header-bg);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ─── Marca ──────────────────────────────────────────────────────────────── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brandIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-header-text);
+  letter-spacing: -0.2px;
+}
+
+/* ─── Derecha ─────────────────────────────────────────────────────────────── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.userName {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userSkeleton {
+  display: inline-block;
+  width: 120px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+  background: rgb(255 255 255 / 0.1);
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ─── Botón logout ────────────────────────────────────────────────────────── */
+.btnLogout {
+  height: 34px;
+  padding: 0 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgb(255 255 255 / 0.2);
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.btnLogout:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.08);
+  border-color: rgb(255 255 255 / 0.35);
+  color: #fff;
+}
+
+.btnLogout:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .userName {
+    display: none;
+  }
+}
