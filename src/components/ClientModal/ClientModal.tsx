@@ -80,7 +80,11 @@ export default function ClientModal({ isOpen, client, onClose, onSave }: ClientM
     setForm((prev) => ({ ...prev, [field]: value }));
     // Limpiar error del campo al editar
     if (frontErrors[field]) setFrontErrors((prev) => ({ ...prev, [field]: undefined }));
-    if (backErrors[field]) setBackErrors((prev) => ({ ...prev, [field]: undefined }));
+    if (backErrors[field]) setBackErrors((prev) => {
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
   }
 
   async function handleSubmit(e: FormEvent) {
